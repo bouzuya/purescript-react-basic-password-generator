@@ -1,7 +1,7 @@
 {
   "name": "purescript-react-basic-password-generator",
   "description": "[mockmock.dev #197](https://mockmock.connpass.com/event/114557/) application",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": {
     "url": "https://bouzuya.net/",
     "name": "bouzuya",
