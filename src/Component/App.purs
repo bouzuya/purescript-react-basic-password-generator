@@ -62,7 +62,12 @@ render self =
   H.div
   { className: "app"
   , children:
-    [ H.div
+    [ -- CSS (1): <style> ... </style>
+      H.style_
+      [ H.text "html, body { margin: 0; }"
+      , H.text ".body > .ok-button:hover { background-color: red !important; }"
+      ]
+    , H.div
       { className: "header"
       , children:
         [ H.h1_
@@ -97,7 +102,18 @@ render self =
           ]
         , H.br {}
         , H.button
-          { onClick: capture_ self Generate
+          { className: "ok-button"
+          , onClick: capture_ self Generate
+          -- CSS (2): style=" ... "
+          , style:
+              css
+                { width: "200px"
+                , height: "24px"
+                , backgroundColor: "#ccccff"
+                , border: "0"
+                , boxShadow: "2px 2px"
+                , cursor: "pointer"
+                }
           , children:
             [ H.text "OK"
             ]
